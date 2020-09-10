@@ -3,6 +3,7 @@
 	width: 80%;
 }
 .header {
+	margin-bottom: 100px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -10,7 +11,7 @@
 	position: relative;
 	padding: 40px 0;
 	padding-left: 44px;
-	font: bold 24px/32px pt_serif, arial, helvetica, sans-serif;
+	font: bold 24px/32px pt_serif, arial, helvetica, sans-self;
 }
 .logo__circle {
 	position: absolute;
@@ -71,12 +72,46 @@
 .menu__item:hover:after, .menu__item_active:after {
 	opacity: 1;
 }
-.main-contect__title{
-	font: bold 24px/32px pt_serif, arial, helvetica, sans-serif;
+.main{
+	padding: 0 63% 100px 0;
+	background: top right no-repeat url(img/pic.svg);
 }
-.main-contect__subtitle{
-		font: 500 18px/21px roboto, arial, helvetica, sans-self;
+.main__title{
+	margin: 0 0 40px 0;
+	font: bold 50px/66px pt_serif, arial, helvetica, sans-self;
 }
-.main-contect__button{
-		font: 500 14px/16px roboto, arial, helvetica, sans-self;
+.main__title-text_highlight{
+	background-color: #ECF3FF;
+}
+.main__subtitle{
+	margin: 0 0 41px 0;
+	font: 500 18px/21px roboto, arial, helvetica, sans-self;
+}
+.main__button{
+	display: inline-block;
+	font: 500 14px/16px roboto, arial, helvetica, sans-self;
+	color: #fff;
+	background: #0056EC;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-radius: 4px;
+}
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+.main__button:hover {
+	animation: bounce 1s;
 }
