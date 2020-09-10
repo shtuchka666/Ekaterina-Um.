@@ -1,6 +1,3 @@
-.main-contect__title {
-	font-family: robotolight;
-}
 .wrapper {
 	margin: auto;
 	width: 80%;
@@ -13,7 +10,7 @@
 	position: relative;
 	padding: 40px 0;
 	padding-left: 44px;
-	font: bold 24px/31px pt_serifbold,arial,helvetica,sans-serif;
+	font: bold 24px/32px pt_serif, arial, helvetica, sans-serif;
 }
 .logo__circle {
 	position: absolute;
@@ -36,12 +33,11 @@
 .menu {
 	display: flex;
 	align-items: center;
-	font-family: robotolight,arial,helvetica,sans-serif;
 }
 .menu__item {
 	position: relative;
 	margin-right: 26px;
-	font: 500 18px/21px Roboto, arial, helvetica, sans-self;
+	font: 500 14px/16px roboto, arial, helvetica, sans-self;
 	color: #000;
 	text-decoration: none;
 	transition: opacity .5s;
@@ -74,4 +70,13 @@
 }
 .menu__item:hover:after, .menu__item_active:after {
 	opacity: 1;
+}
+.main-contect__title{
+	font: bold 24px/32px pt_serif, arial, helvetica, sans-serif;
+}
+.main-contect__subtitle{
+		font: 500 18px/21px roboto, arial, helvetica, sans-self;
+}
+.main-contect__button{
+		font: 500 14px/16px roboto, arial, helvetica, sans-self;
 }
