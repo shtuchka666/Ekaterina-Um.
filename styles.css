@@ -9,7 +9,7 @@
 }
 .logo {
 	position: relative;
-	padding: 40px 0;
+	padding: 35px 0;
 	padding-left: 44px;
 	font: bold 24px/32px pt_serif, arial, helvetica, sans-self;
 }
@@ -38,7 +38,7 @@
 .menu__item {
 	position: relative;
 	margin-right: 26px;
-	font: 500 14px/16px roboto, arial, helvetica, sans-self;
+	font: 500 18px/16px roboto, arial, helvetica, sans-self;
 	color: #000;
 	text-decoration: none;
 	transition: opacity .5s;
@@ -76,28 +76,35 @@
 	opacity: 1;
 }
 .main{
-	padding: 0 63% 100px 0;
-	background: top right no-repeat url(img/pic.svg);
+	display: flex;
+	justify-content: space-between;
 }
 .main__title{
-	margin: 0 0 40px 0;
-	font: bold 50px/66px pt_serif, arial, helvetica, sans-self;
+	margin: 138px 0 30px 0;
+	font: bold 66px/21px pt_serif, arial, helvetica, sans-self;
 }
 .main__title-text_highlight{
 	background-color: #ECF3FF;
 }
 .main__subtitle{
-	margin: 0 0 41px 0;
-	font: 500 18px/21px roboto, arial, helvetica, sans-self;
+	margin: 0 0 37px 0;
+	font: 500 20px/30px roboto, arial, helvetica, sans-self;
+	width: 400px;
 }
 .main__button{
 	display: inline-block;
-	font: 500 14px/16px roboto, arial, helvetica, sans-self;
+	font: 500 17px/20px roboto, arial, helvetica, sans-self;
 	color: #fff;
 	background: #0056EC;
-	padding: 14px 16px;
+	padding: 20px 32px;
 	text-decoration: none;
 	border-radius: 4px;
+}
+.main__picture{
+	max-width: 145%;
+	width: 760px;
+	height: auto;
+	margin: 5% 0 0 0;
 }
 @keyframes bounce {
 	0%, 20%, 60%, 100% {
@@ -186,7 +193,7 @@
 		font: 500 14px/16px roboto, arial, helvetica, sans-self;
 	}
 }
-@media (min-width: 768px) and (max-width: 1365px){
+/*@media (min-width: 768px) and (max-width: 1365px){
 	.wrapper {
 		width: 92%;
 	}
@@ -219,4 +226,4 @@
 	    text-decoration: none;
 	    border-radius: 4px;
     }
-}
+}*/
