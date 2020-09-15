@@ -127,7 +127,7 @@
 .main__button:hover {
 	animation: bounce 1s;
 }
-@media (max-width: 767px){
+@media (max-width: 1023px){
 	.menu{
 		display: none;
 	}
@@ -228,5 +228,37 @@
 		}
 		.main__picture_img{
 			width: 520px;
+		}
+}
+@media (min-width: 1024px) and (max-width: 1170px){
+	.wrapper {
+		width: 92%;
+	}
+	.header{
+		margin-bottom: -10px;
+//		margin-right: 17px;
+	}
+	.menu__item {
+		font: 500 14px/16px roboto, arial, helvetica, sans-self;
+	}
+	.main__picture{
+		margin: 95px 0 0 0;
+		width: 520px;
+		height: auto;
+	}
+	.main__picture_img{
+		width: 510px;
+	}
+	.main__title{
+		margin-bottom: 65px;
+		font: bold 50px/15px pt_serif, arial, helvetica, sans-self;
+	}
+	.main__subtitle{
+		margin: 0 0 43px 0;
+		font: 500 17px/20px roboto, arial, helvetica, sans-self;
+		}
+		.main__button{
+			font: 500 13px/10px roboto, arial, helvetica, sans-self;
+			padding: 18px 26px;
 		}
 }
