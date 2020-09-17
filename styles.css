@@ -116,25 +116,27 @@
 .menu-mobile__item{
 	position: absolute;
 	width: 100%;
-	top: 21%;
+	top: 20%;
 	text-align: center;
 }
 .menu-mobile__item_point{
 	text-decoration: none;
-	font: 500 30px/60px roboto, arial, helvetica, sans-self;
+	font: 500 30px/42px roboto, arial, helvetica, sans-self;
 	color: #000;
-	display: block;
 	position: relative;
+	display: inline-block;
+}
+.menu-mobile__item_point:hover{
+	opacity: .5;
 }
 .menu-mobile__img:hover {
 	opacity: .5;
 }
 .menu-mobile__item_point:after{
 	display: block;
-	position: absolute;
+	position: relative;
 	content: '';
 	height: 3px;
-	width: 100%;
 	background-color: #0056EC;
 	opacity: 0;
 	transition: opacity .5s;
