@@ -1,46 +1,45 @@
-.wrapper {
-	margin: auto;
-	width: 80%;
-}
-.hidden-menu-ticker{
-	display: none;
-}
-.header {
-	margin-bottom: 100px;
+.main{
 	display: flex;
 	justify-content: space-between;
 }
-.logo {
-	position: relative;
-	padding: 35px 0;
-	padding-left: 44px;
-	font: bold 24px/32px pt_serif, arial, helvetica, sans-self;
+.main__title{
+	margin: 138px 0 30px 0;
+	font: bold 66px/21px pt_serif, arial, helvetica, sans-self;
 }
-.logo__circle {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
-	opacity: .7;
+.main__title-text_highlight{
+	background-color: #ECF3FF;
 }
-.logo__circle_color_dark-blue {
+.main__subtitle{
+	margin: 0 0 37px 0;
+	font: 500 20px/30px roboto, arial, helvetica, sans-self;
+	width: 400px;
+}
+.main__button{
+	display: inline-block;
+	font: 500 17px/20px roboto, arial, helvetica, sans-self;
+	color: #fff;
 	background: #0056EC;
+	padding: 20px 32px;
+	text-decoration: none;
+	border-radius: 4px;
 }
-.logo__circle_color_blue {
-	left: 8px;
-	top: 56%;
-	background: #C8DBFB;
+.main__picture{
+	height: auto;
+	margin: 2% 0 0 0;
+	width: 51%;
+}
+.main__picture_img{
+	width: 100%;
 }
 .menu {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 }
 .menu__item {
 	position: relative;
 	margin-right: 26px;
+	padding: 0 12px;
 	font: 500 18px/16px roboto, arial, helvetica, sans-self;
 	color: #000;
 	text-decoration: none;
@@ -78,77 +77,41 @@
 .menu__item:hover:after, .menu__item_active:after {
 	opacity: 1;
 }
-.main{
+.wrapper {
+	margin: auto;
+	width: 80%;
+}
+.hidden-menu-ticker{
+	display: none;
+}
+.header {
+	margin-bottom: 100px;
 	display: flex;
 	justify-content: space-between;
 }
-.main__title{
-	margin: 138px 0 30px 0;
-	font: bold 66px/21px pt_serif, arial, helvetica, sans-self;
+.logo {
+	position: relative;
+	padding: 35px 0;
+	padding-left: 44px;
+	font: bold 24px/32px pt_serif, arial, helvetica, sans-self;
 }
-.main__title-text_highlight{
-	background-color: #ECF3FF;
-}
-.main__subtitle{
-	margin: 0 0 37px 0;
-	font: 500 20px/30px roboto, arial, helvetica, sans-self;
-	width: 400px;
-}
-.main__button{
-	display: inline-block;
-	font: 500 17px/20px roboto, arial, helvetica, sans-self;
-	color: #fff;
-	background: #0056EC;
-	padding: 20px 32px;
-	text-decoration: none;
-	border-radius: 4px;
-}
-.main__picture{
-	height: auto;
-	margin: 2% 0 0 0;
-	width: 51%;
-}
-.main__picture_img{
-	width: 100%;
-}
-.menu-mobile:hover{
-	transition: all .6s ease;
-}
-.menu-mobile__img{
-	float: right;
-	display: block;
-	margin: 21px 5% 0 0;
-}
-.menu-mobile__item{
+.logo__circle {
 	position: absolute;
-	width: 100%;
-	top: 20%;
-	text-align: center;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	opacity: .7;
 }
-.menu-mobile__item_point{
-	text-decoration: none;
-	font: 500 30px/42px roboto, arial, helvetica, sans-self;
-	color: #000;
-	position: relative;
-	display: inline-block;
+.logo__circle_color_dark-blue {
+	background: #0056EC;
 }
-.menu-mobile__item_point:hover{
-	opacity: .5;
-}
-.menu-mobile__img:hover {
-	opacity: .5;
-}
-.menu-mobile__item_point:after{
-	display: block;
-	position: relative;
-	content: '';
-	height: 3px;
-	background-color: #0056EC;
-	opacity: 0;
-	transition: opacity .5s;
-}
-.menu-mobile__item_point:hover:after{
-	opacity: .5;
+.logo__circle_color_blue {
+	left: 8px;
+	top: 56%;
+	background: #C8DBFB;
 }
 @keyframes bounce {
 	0%, 20%, 60%, 100% {
@@ -170,27 +133,55 @@
 	animation: bounce 1s;
 }
 @media (max-width: 1023px){
-	.menu{
+	.main{
+		text-align: center;
+		position: relative;
 		display: block;
+		background: no-repeat top/280px url(img/pic.svg);
+		padding: 140px 0 0 0;
+	}
+	.main__picture_img{
+		display: none;
+	}
+	.main__title{
+		margin-bottom: 45px;
+		font: bold 31px/8px pt_serif, arial, helvetica, sans-self;
+	}
+	.main__subtitle{
+		margin: auto;
+		padding-bottom: 26px;
+		width: 250px;
+		font: 500 16px/19px roboto, arial, helvetica, sans-self;
+	}
+	.main__button{
+		font: 500 13px/16px roboto, arial, helvetica, sans-self;
+		padding: 14px 27px;
 	}
 	.menu{
+		display: block;
 		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
 		width: 100%;
-		top: 20%;
+		height: 100%;
+		background-color: white;
 		text-align: center;
-		margin-top: -100%;
+		margin-top: -220%;
 		transition: all 0.5s;
 	}
 	.menu__item{
 		text-decoration: none;
-		font: 500 30px/42px roboto, arial, helvetica, sans-self;
+		margin-top: 20px;
+		font: 500 30px/22px roboto, arial, helvetica, sans-self;
 		color: #000;
 		position: relative;
 		display: inline-block;
+		border-color: blue;
 	}
 	.wrapper {
-	  width: 100%;
-  }
+		width: 100%;
+	}
 	.logo{
 		margin-left: 17px;
 	}
@@ -227,52 +218,29 @@
 	}
 	.hidden-menu-ticker:checked ~ .menu {
 		margin-top: 0;
+		padding-top: 300px;
 	}
 	.hidden-menu-ticker:checked ~ .menu__item_burger:before{
 		transform: rotate(-45deg);
 		top: 4px;
+		z-index: 2;
 	}
 	.hidden-menu-ticker:checked ~ .menu__item_burger:after{
 		transform: rotate(45deg);
 		bottom: 9px;
+		z-index: 2;
 	}
-	.hidden-menu-ticker:checked ~ .menu__item_burger span{
-		display: none;
-	}
+
 	.header{
 		margin-bottom: 10px;
 	}
 	.logo__text{
 		display: none;
 	}
-	.main{
-		text-align: center;
-		position: relative;
-		display: block;
-		background: no-repeat top/280px url(img/pic.svg);
-		padding: 140px 0 0 0;
-	}
-	.main__picture_img{
-		display: none;
-	}
-	.main__title{
-		margin-bottom: 45px;
-		font: bold 31px/8px pt_serif, arial, helvetica, sans-self;
-	}
-	.main__subtitle{
-		margin: auto;
-		padding-bottom: 26px;
-		width: 250px;
-		font: 500 16px/19px roboto, arial, helvetica, sans-self;
-	}
-	.main__button{
-		font: 500 13px/16px roboto, arial, helvetica, sans-self;
-		padding: 14px 27px;
-	}
 }
-@media (min-width: 1171px) and (max-width: 1366px){
+@media (min-width: 1172px) and (max-width: 1367px){
 	.wrapper {
-		width: 930px;
+		width: 69%;
 	}
   .menu__item {
     font-size: 14px;
@@ -301,9 +269,9 @@
 			width: 520px;
 		}
 }
-@media (min-width: 1024px) and (max-width: 1170px){
+@media (min-width: 1024px) and (max-width: 1171px){
 	.wrapper {
-		width: 92%;
+		width: 95%;
 	}
 	.header{
 		margin-bottom: -10px;
