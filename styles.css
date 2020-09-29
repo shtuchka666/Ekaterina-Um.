@@ -38,7 +38,7 @@
 }
 .menu__item {
 	position: relative;
-	margin-right: 26px;
+	margin-left: 26px;
 	font: 500 18px/16px roboto, arial, helvetica, sans-self;
 	color: #000;
 	text-decoration: none;
