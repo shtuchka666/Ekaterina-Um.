@@ -1,3 +1,90 @@
+.wrapper {
+	margin: auto;
+	width: 80%;
+}
+.header {
+	margin-bottom: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+.logo {
+	position: relative;
+	padding: 35px 0;
+	padding-left: 44px;
+	font: bold 24px/32px pt_serif, arial, helvetica, sans-self;
+	text-decoration: none;
+}
+.logo__circle {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	opacity: .7;
+}
+.logo__circle_color_dark-blue {
+	background: #0056EC;
+}
+.logo__circle_color_blue {
+	left: 8px;
+	top: 56%;
+	background: #C8DBFB;
+}
+.logo__text{
+	text-decoration: none;
+	color: #000;
+}
+.hidden-menu-ticker{
+	display: none;
+}
+.menu__item_burger{
+	display: none;
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu__item {
+	position: relative;
+	margin-left: 26px;
+	font: 500 18px/16px roboto, arial, helvetica, sans-self;
+	color: #000;
+	text-decoration: none;
+	transition: opacity .5s;
+}
+.menu__item:last-child {
+	margin-right: 0;
+}
+.menu__item:hover {
+	opacity: .5;
+}
+.menu__item:after {
+	position: absolute;
+	display: block;
+	content:'';
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #0056EC;
+	opacity: 0;
+	transition: opacity .5s;
+}
+.menu__item_active:after {
+	position: absolute;
+	display: block;
+	content:'';
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #0056EC;
+	margin-right: 0;
+}
+.menu__item:hover:after, .menu__item_active:after {
+	opacity: 1;
+}
 .main{
 	display: flex;
 	justify-content: space-between;
@@ -31,136 +118,40 @@
 .main__picture_img{
 	width: 100%;
 }
-.menu {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.menu__item {
-	position: relative;
-	margin-left: 26px;
-	font: 500 18px/16px roboto, arial, helvetica, sans-self;
-	color: #000;
-	text-decoration: none;
-	transition: opacity .5s;
-}
-.menu__item_burger{
-	display: none;
-}
-.menu__item:last-child {
-	margin-right: 0;
-}
-.menu__item_active:after {
-	position: absolute;
-	display: block;
-	content:'';
-	left: 0;
-	width: 100%;
-	height: 3px;
-	background: #0056EC;
-	margin-right: 0;
-}
-.menu__item:hover {
-	opacity: .5;
-}
-.menu__item:after {
-	position: absolute;
-	display: block;
-	content:'';
-	left: 0;
-	width: 100%;
-	height: 3px;
-	background: #0056EC;
-	opacity: 0;
-	transition: opacity .5s;
-}
-.menu__item:hover:after, .menu__item_active:after {
-	opacity: 1;
-}
-.wrapper {
-	margin: auto;
-	width: 80%;
-}
-.hidden-menu-ticker{
-	display: none;
-}
-.header {
-	margin-bottom: 100px;
-	display: flex;
-	justify-content: space-between;
-}
-.logo {
-	position: relative;
-	padding: 35px 0;
-	padding-left: 44px;
-	font: bold 24px/32px pt_serif, arial, helvetica, sans-self;
-}
-.logo__circle {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
-	opacity: .7;
-}
-.logo__circle_color_dark-blue {
-	background: #0056EC;
-}
-.logo__circle_color_blue {
-	left: 8px;
-	top: 56%;
-	background: #C8DBFB;
+.main__button:hover {
+	animation: bounce 1s;
 }
 @keyframes bounce {
 	0%, 20%, 60%, 100% {
 		transform: translateY(0);
 		transform: translateY(0);
 	}
-
 	40% {
 		transform: translateY(-20px);
 		transform: translateY(-20px);
 	}
-
 	80% {
 		transform: translateY(-10px);
 		transform: translateY(-10px);
 	}
 }
-.main__button:hover {
-	animation: bounce 1s;
-}
-@media (max-width: 1023px){
-	.main{
-		text-align: center;
-		position: relative;
-		display: block;
-		background: no-repeat top/280px url(img/pic.svg);
-		padding: 140px 0 0 0;
+
+@media (max-width: 1023px) {
+	.wrapper {
+		width: 100%;
 	}
-	.main__picture_img{
+	.header {
+		margin-bottom: 10px;
+	}
+	.logo {
+		margin-left: 17px;
+	}
+	.logo__text {
 		display: none;
 	}
-	.main__title{
-		margin-bottom: 45px;
-		font: bold 31px/8px pt_serif, arial, helvetica, sans-self;
-	}
-	.main__subtitle{
-		margin: auto;
-		padding-bottom: 26px;
-		width: 250px;
-		font: 500 16px/19px roboto, arial, helvetica, sans-self;
-	}
-	.main__button{
-		font: 500 13px/16px roboto, arial, helvetica, sans-self;
-		padding: 14px 27px;
-	}
-	.menu{
-		display: block;
+	.menu {
+		flex-direction: column;
 		position: absolute;
-		top: 50%;
 		transform: translateY(-50%);
 		z-index: 1;
 		width: 100%;
@@ -170,22 +161,15 @@
 		margin-top: -220%;
 		transition: all 0.5s;
 	}
-	.menu__item{
+	.menu__item {
 		text-decoration: none;
-		margin: 20px 0 0 0;
 		font: 500 30px/22px roboto, arial, helvetica, sans-self;
 		color: #000;
 		position: relative;
 		display: inline-block;
-		border-color: blue;
+		background-color: red;
 	}
-	.wrapper {
-		width: 100%;
-	}
-	.logo{
-		margin-left: 17px;
-	}
-	.menu__item_burger{
+		.menu__item_burger {
 		display: block;
 		position: relative;
 		width: 25px;
@@ -230,24 +214,42 @@
 		bottom: 9px;
 		z-index: 2;
 	}
-
-	.header{
-		margin-bottom: 10px;
+	.main{
+		text-align: center;
+		position: relative;
+		display: block;
+		background: no-repeat top/280px url(img/pic.svg);
+		padding: 140px 0 0 0;
 	}
-	.logo__text{
+	.main__title{
+		margin-bottom: 45px;
+		font: bold 31px/8px pt_serif, arial, helvetica, sans-self;
+	}
+	.main__subtitle{
+		margin: auto;
+		padding-bottom: 26px;
+		width: 250px;
+		font: 500 16px/19px roboto, arial, helvetica, sans-self;
+	}
+	.main__button{
+		font: 500 13px/16px roboto, arial, helvetica, sans-self;
+		padding: 14px 27px;
+	}
+	.main__picture_img{
 		display: none;
 	}
 }
+
 @media (min-width: 1172px) and (max-width: 1367px){
 	.wrapper {
 		width: 69%;
 	}
-  .menu__item {
-    font-size: 14px;
-    }
-  .header{
+	.header{
 		margin-bottom: -10px;
 	}
+  .menu__item {
+    font-size: 14px;
+  }
 	.main__title{
 		margin-bottom: 65px;
 		font: bold 50px/15px pt_serif, arial, helvetica, sans-self;
@@ -269,24 +271,16 @@
 			width: 520px;
 		}
 }
+
 @media (min-width: 1024px) and (max-width: 1171px){
 	.wrapper {
 		width: 95%;
 	}
 	.header{
 		margin-bottom: -10px;
-//		margin-right: 17px;
 	}
 	.menu__item {
 		font: 500 14px/16px roboto, arial, helvetica, sans-self;
-	}
-	.main__picture{
-		margin: 95px 0 0 0;
-		width: 520px;
-		height: auto;
-	}
-	.main__picture_img{
-		width: 510px;
 	}
 	.main__title{
 		margin-bottom: 65px;
@@ -299,5 +293,13 @@
 		.main__button{
 			font: 500 13px/10px roboto, arial, helvetica, sans-self;
 			padding: 18px 26px;
+		}
+		.main__picture{
+			margin: 95px 0 0 0;
+			width: 520px;
+			height: auto;
+		}
+		.main__picture_img{
+			width: 510px;
 		}
 }
