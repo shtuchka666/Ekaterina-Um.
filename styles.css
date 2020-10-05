@@ -152,22 +152,23 @@
 	.menu {
 		flex-direction: column;
 		position: absolute;
-//		transform: translateY(-50%);
+		transform: translateY(50%);
 		z-index: 1;
 		width: 100%;
 		height: 100%;
 		background-color: white;
-		text-align: center;
-		margin-top: -220%;
+		justify-content:flex-start;
+		padding-top: 45%;
+		top: 50%;
 		transition: all 0.5s;
 	}
 	.menu__item {
 		text-decoration: none;
-		font: 500 30px/22px roboto, arial, helvetica, sans-self;
+		font: 500 30px/60px roboto, arial, helvetica, sans-self;
 		color: #000;
+		margin-left: -26px;
 		position: relative;
 		display: inline-block;
-		background-color: red;
 	}
 		.menu__item_burger {
 		display: block;
@@ -201,18 +202,20 @@
 		bottom: 0;
 	}
 	.hidden-menu-ticker:checked ~ .menu {
-		margin-top: 0;
-		padding-top: 300px;
+		top: -60%;
 	}
-	.hidden-menu-ticker:checked ~ .menu__item_burger:before{
+	.hidden-menu-ticker:checked ~ .menu__item_burger:before {
 		transform: rotate(-45deg);
 		top: 4px;
 		z-index: 2;
 	}
-	.hidden-menu-ticker:checked ~ .menu__item_burger:after{
+	.hidden-menu-ticker:checked ~ .menu__item_burger:after {
 		transform: rotate(45deg);
 		bottom: 9px;
 		z-index: 2;
+	}
+	.hidden-menu-ticker:checked ~ .menu__item_burger span {
+		display: none;
 	}
 	.main{
 		text-align: center;
